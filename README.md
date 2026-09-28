@@ -1,17 +1,19 @@
 # Compositor — Community Multilingual Edition
 
-> A free, native macOS image editor (see the [official repository](https://github.com/robbietilton/Compositor)). This community fork adds a **multilingual interface** built on an Xcode String Catalog: the app follows your system language and lets you switch manually.
+**English** · [简体中文](#简体中文)
 
-- **简体中文** — Chinese (Simplified) · 界面已完整翻译，术语对齐简体中文版 Photoshop
+## English
+
+A free, native macOS image editor — a community multilingual edition of [Compositor](https://github.com/robbietilton/Compositor). The app follows your system language and can also be switched manually.
+
 - **English** — source language, always complete
+- **简体中文** — Simplified Chinese, core UI translated, terminology aligned with Simplified Chinese Photoshop
 
-Other languages can be added by contributing translations — see [Contributing a language](#contributing-a-language). Anything untranslated automatically falls back to English, so the app stays fully usable.
+Anything untranslated falls back to English, so the app is always fully usable.
 
-## Build and run
+### Build and run
 
-This fork ships **source only**. The upstream app's signed, notarized DMG is produced with the original author's Apple Developer certificate, which we do not have — so there is no one-click installer here.
-
-To build it yourself:
+This fork ships source only. The signed, notarized DMG on the upstream repo is produced with the original author's Apple Developer certificate, which this fork does not have.
 
 ```sh
 git clone https://github.com/MJorgin/Compositor-i18n.git
@@ -19,43 +21,74 @@ cd Compositor-i18n
 open Compositor.xcodeproj      # then Run (⌘R)
 ```
 
-Requires **macOS 26.5 or later** and **Xcode 26 or later**. A locally built app runs fine for personal use; macOS may ask you to confirm opening it.
+Requires **macOS 26.5+** and **Xcode 26+**.
 
-If you only want Chinese on your own machine, building once from source is enough.
+### Switching language
 
-## Switching language
+Compositor menu (top-left) → **Language…** → Follow System / English / 简体中文. Applies after restarting.
 
-Compositor menu (top-left) → **Language…**:
+### Contributing a language
 
-- **Follow System** (default)
-- **English**
-- **简体中文**
+All strings live in one String Catalog: `Compositor/Localizable.xcstrings`.
 
-The choice applies after restarting Compositor.
-
-## Language status
+1. Add your language in Xcode.
+2. Translate — align technical terms with the localized Photoshop for your language.
+3. Please do not submit machine translation; a fluent speaker should review UI strings.
+4. Open a PR and add yourself to the table below.
 
 | Language | Code | Coverage | Maintainer(s) |
 |---|---|---|---|
 | English | `en` | 100% (source) | upstream |
 | 简体中文 | `zh-Hans` | core complete | community |
 
-Coverage is tracked per language. Missing strings simply show English.
+### Relation to upstream
 
-## Contributing a language
+A Simplified Chinese localization was offered upstream as PR #113. The maintainer explained that, early in a solo-maintained project, ongoing multi-language upkeep is not feasible yet, so the PR was closed. This fork keeps the **same features**, adds the language layer, and continues tracking upstream. Many thanks to the original author.
 
-All translations live in one String Catalog: `Compositor/Localizable.xcstrings`.
+---
 
-1. Open the catalog and add your language (or pick an existing one).
-2. Translate the strings; please align technical terms with the localized Adobe Photoshop in your language.
-3. Leave machine translation out — a fluent native speaker should review UI strings.
-4. Open a PR and add yourself to the table above.
+## 简体中文
 
-To see what changed upstream, run the extractor under the localizer skill to list any new keys; new keys stay English until translated.
+一个免费、原生的 macOS 图像编辑器，是 [Compositor](https://github.com/robbietilton/Compositor) 的**社区多语言版**：界面跟随系统语言，也可在应用内手动切换。
 
-## Relation to upstream
+- **简体中文** —— 核心界面已完整翻译，术语对齐简体中文版 Photoshop（图层 / 蒙版 / 羽化 / 色阶 / 曲线 / 内容感知填充）
+- **English** —— 源语言，始终完整
 
-A Simplified Chinese localization was submitted as PR #113. The maintainer explained that, as a solo developer early in the project's life, taking on ongoing multi-language upkeep isn't feasible yet, so the PR was closed. This fork keeps the **same features**, adds the language layer, and continues to track upstream. Many thanks to the original author for open-sourcing the app.
+未翻译的条目自动回退英文，不影响使用。
+
+### 构建与运行
+
+本仓库只提供源码。官方那种「下载即用」的签名安装包，是作者用他自己的 Apple 开发者证书签名并公证的，本仓库没有该证书，因此不提供安装包。
+
+```sh
+git clone https://github.com/MJorgin/Compositor-i18n.git
+cd Compositor-i18n
+open Compositor.xcodeproj      # 然后按 ⌘R 运行
+```
+
+需要 **macOS 26.5 或更高版本** 与 **Xcode 26 或更高版本**。本地构建的 App 自己使用完全没问题。
+
+### 切换语言
+
+屏幕左上角 Compositor 菜单 → **Language… / 语言…** → 跟随系统 / English / 简体中文。选择后重新启动 Compositor 生效。
+
+### 参与翻译
+
+所有文案集中在同一个 String Catalog：`Compositor/Localizable.xcstrings`。
+
+1. 在 Xcode 里添加你的语言
+2. 翻译时请对齐**该语言版 Photoshop** 的术语
+3. 请不要提交机器翻译——界面文案应由母语者审校
+4. 提交 PR，并在下表中加上自己
+
+| 语言 | 代码 | 完成度 | 维护者 |
+|---|---|---|---|
+| English | `en` | 100%（源语言） | 上游 |
+| 简体中文 | `zh-Hans` | 核心界面完成 | 社区 |
+
+### 与官方版本的关系
+
+简体中文化曾以 PR #113 提交给上游。作者说明：项目早期由一人维护，暂时无法承担多语言的持续跟进，因此关闭了该 PR。本仓库**功能与官方版一致**，仅增加语言层，并持续跟进上游。感谢原作者开源如此优秀的工具。
 
 ---
 
