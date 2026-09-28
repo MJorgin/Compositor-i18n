@@ -1,4 +1,66 @@
-# Compositor
+# Compositor — Community Multilingual Edition
+
+> A free, native macOS image editor (see the [official repository](https://github.com/robbietilton/Compositor)). This community fork adds a **multilingual interface** built on an Xcode String Catalog: the app follows your system language and lets you switch manually.
+
+- **简体中文** — Chinese (Simplified) · 界面已完整翻译，术语对齐简体中文版 Photoshop
+- **English** — source language, always complete
+
+Other languages can be added by contributing translations — see [Contributing a language](#contributing-a-language). Anything untranslated automatically falls back to English, so the app stays fully usable.
+
+## Build and run
+
+This fork ships **source only**. The upstream app's signed, notarized DMG is produced with the original author's Apple Developer certificate, which we do not have — so there is no one-click installer here.
+
+To build it yourself:
+
+```sh
+git clone https://github.com/MJorgin/Compositor-i18n.git
+cd Compositor-i18n
+open Compositor.xcodeproj      # then Run (⌘R)
+```
+
+Requires **macOS 26.5 or later** and **Xcode 26 or later**. A locally built app runs fine for personal use; macOS may ask you to confirm opening it.
+
+If you only want Chinese on your own machine, building once from source is enough.
+
+## Switching language
+
+Compositor menu (top-left) → **Language…**:
+
+- **Follow System** (default)
+- **English**
+- **简体中文**
+
+The choice applies after restarting Compositor.
+
+## Language status
+
+| Language | Code | Coverage | Maintainer(s) |
+|---|---|---|---|
+| English | `en` | 100% (source) | upstream |
+| 简体中文 | `zh-Hans` | core complete | community |
+
+Coverage is tracked per language. Missing strings simply show English.
+
+## Contributing a language
+
+All translations live in one String Catalog: `Compositor/Localizable.xcstrings`.
+
+1. Open the catalog and add your language (or pick an existing one).
+2. Translate the strings; please align technical terms with the localized Adobe Photoshop in your language.
+3. Leave machine translation out — a fluent native speaker should review UI strings.
+4. Open a PR and add yourself to the table above.
+
+To see what changed upstream, run the extractor under the localizer skill to list any new keys; new keys stay English until translated.
+
+## Relation to upstream
+
+A Simplified Chinese localization was submitted as PR #113. The maintainer explained that, as a solo developer early in the project's life, taking on ongoing multi-language upkeep isn't feasible yet, so the PR was closed. This fork keeps the **same features**, adds the language layer, and continues to track upstream. Many thanks to the original author for open-sourcing the app.
+
+---
+
+# Compositor (upstream README)
+
 
 Adobe Photoshop costs too much and tools like GIMP don’t feel familiar enough for me to stay in flow. That’s why I built Compositor.
 
