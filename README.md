@@ -4,10 +4,14 @@
 
 ## English
 
-A free, native macOS image editor — a community multilingual edition of [Compositor](https://github.com/robbietilton/Compositor). The app follows your system language and can also be switched manually. This edition is currently based on upstream Compositor **1.3.7**.
+A free, native macOS image editor — a community multilingual edition of [Compositor](https://github.com/robbietilton/Compositor). The app follows your system language and can also be switched manually. This edition is currently based on upstream Compositor **1.3.7** and includes six interface languages.
 
 - **English** — source language, always complete
-- **简体中文** — Simplified Chinese, all 715 interface strings translated, terminology aligned with Simplified Chinese Photoshop
+- **简体中文** — all 715 interface strings translated; terminology aligned with Simplified Chinese Photoshop
+- **繁體中文** — all 715 interface strings translated; terminology aligned with Traditional Chinese Photoshop
+- **日本語** — all 715 interface strings translated; terminology aligned with Japanese Photoshop
+- **한국어** — all 715 interface strings translated; terminology aligned with Korean Photoshop
+- **Español** — all 715 interface strings translated; terminology aligned with Spanish Photoshop
 
 Anything untranslated falls back to English, so the app is always fully usable.
 
@@ -25,7 +29,7 @@ Requires **macOS 26.5+** and **Xcode 26+**.
 
 ### Switching language
 
-Compositor menu (top-left) → **Language…** → Follow System / English / 简体中文. Applies after restarting.
+Compositor menu (top-left) → **Language…** → Follow System / English / 简体中文 / 繁體中文 / 日本語 / 한국어 / Español. Applies after restarting.
 
 ### Contributing a language
 
@@ -40,6 +44,10 @@ All strings live in one String Catalog: `Compositor/Localizable.xcstrings`.
 |---|---|---|---|
 | English | `en` | 100% (source) | upstream |
 | 简体中文 | `zh-Hans` | complete (715 strings) | community |
+| 繁體中文 | `zh-Hant` | complete (715 strings) | community |
+| 日本語 | `ja` | complete (715 strings) | community |
+| 한국어 | `ko` | complete (715 strings) | community |
+| Español | `es` | complete (715 strings) | community |
 
 ### Relation to upstream
 
@@ -49,9 +57,10 @@ A Simplified Chinese localization was offered upstream as PR #113. The maintaine
 
 ## 简体中文
 
-一个免费、原生的 macOS 图像编辑器，是 [Compositor](https://github.com/robbietilton/Compositor) 的**社区多语言版**：界面跟随系统语言，也可在应用内手动切换。当前已同步官方 Compositor **1.3.7**。
+一个免费、原生的 macOS 图像编辑器，是 [Compositor](https://github.com/robbietilton/Compositor) 的**社区多语言版**：界面跟随系统语言，也可在应用内手动切换。当前已同步官方 Compositor **1.3.7**，提供 6 种界面语言。
 
-- **简体中文** —— 全部 715 条界面文案已翻译，术语对齐简体中文版 Photoshop（图层 / 蒙版 / 羽化 / 色阶 / 曲线 / 内容感知填充）
+- **简体中文 / 繁體中文** —— 全部 715 条界面文案已翻译，术语分别对齐简中 / 繁中版 Photoshop
+- **日本語 / 한국어 / Español** —— 全部 715 条界面文案已翻译，术语分别对齐日文、韩文、西文版 Photoshop
 - **English** —— 源语言，始终完整
 
 当前简中条目无缺失；未来新增界面若暂未翻译，会自动回退英文，不影响使用。
@@ -70,7 +79,7 @@ open Compositor.xcodeproj      # 然后按 ⌘R 运行
 
 ### 切换语言
 
-屏幕左上角 Compositor 菜单 → **Language… / 语言…** → 跟随系统 / English / 简体中文。选择后重新启动 Compositor 生效。
+屏幕左上角 Compositor 菜单 → **Language… / 语言…** → 跟随系统 / English / 简体中文 / 繁體中文 / 日本語 / 한국어 / Español。选择后重新启动 Compositor 生效。
 
 ### 参与翻译
 
@@ -85,6 +94,10 @@ open Compositor.xcodeproj      # 然后按 ⌘R 运行
 |---|---|---|---|
 | English | `en` | 100%（源语言） | 上游 |
 | 简体中文 | `zh-Hans` | 完整（715 条） | 社区 |
+| 繁體中文 | `zh-Hant` | 完整（715 条） | 社区 |
+| 日本語 | `ja` | 完整（715 条） | 社区 |
+| 한국어 | `ko` | 完整（715 条） | 社区 |
+| Español | `es` | 完整（715 条） | 社区 |
 
 ### 与官方版本的关系
 

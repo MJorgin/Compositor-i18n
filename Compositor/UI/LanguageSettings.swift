@@ -5,6 +5,10 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case system
     case english
     case chinese
+    case traditionalChinese
+    case japanese
+    case korean
+    case spanish
     var id: String { rawValue }
 
     /// The actual locale identifier; nil means "follow the system language".
@@ -13,6 +17,10 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .system: nil
         case .english: "en"
         case .chinese: "zh-Hans"
+        case .traditionalChinese: "zh-Hant"
+        case .japanese: "ja"
+        case .korean: "ko"
+        case .spanish: "es"
         }
     }
 
@@ -21,6 +29,10 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .system: String(localized: "Follow System", defaultValue: "Follow System")
         case .english: "English"
         case .chinese: "简体中文"
+        case .traditionalChinese: "繁體中文"
+        case .japanese: "日本語"
+        case .korean: "한국어"
+        case .spanish: "Español"
         }
     }
 }
