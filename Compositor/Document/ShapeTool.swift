@@ -4,6 +4,7 @@ nonisolated enum ShapeKind: String, CaseIterable, Codable, Sendable {
     case rectangle = "Rectangle"
     case ellipse = "Ellipse"
     case line = "Line"
+    var localizedName: String { String(localized: String.LocalizationValue(rawValue)) }
     /// The shape filling `rect`. A rectangle's corners round by `cornerRadius`, at most half its shorter
     /// side (so a large radius makes a pill); ellipses ignore it. A line runs corner to corner and is stroked,
     /// not filled (see `linePath`).
@@ -128,7 +129,7 @@ extension EditorSession {
         }
         guard canEditLayers, document != nil, rect.width >= 1, rect.height >= 1 else { return }
         guard Int(rect.width) * Int(rect.height) <= Self.maxShapePixels else {
-            brushError = "That shape is too large. A shape can cover up to \(DocumentLimits.maxSurfaceMegapixels) megapixels."
+            brushError = String(localized: "That shape is too large. A shape can cover up to \(DocumentLimits.maxSurfaceMegapixels) megapixels.")
             return
         }
         do {
