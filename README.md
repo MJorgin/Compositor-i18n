@@ -1,6 +1,26 @@
 # Compositor — Community Multilingual Edition
 
-**English** · [简体中文](#简体中文)
+**[English](#english)** · [简体中文](#简体中文) · [繁體中文](#繁體中文) · [日本語](#日本語) · [한국어](#한국어) · [Español](#español)
+
+## 六语简介 / Six-language overview
+
+### 繁體中文
+
+Compositor 是 macOS 上免費、原生的影像編輯器。這個社群版本基於官方 1.3.7，完整提供英文、簡中、繁中、日文、韓文與西文介面。已安裝官方版的使用者，只要先結束 App、開啟 DMG，並在系統詢問時選擇「取代」即可；圖片和 `.comp` 專案不會被變更。
+
+### 日本語
+
+Compositor は macOS 向けの無料でネイティブな画像編集アプリです。このコミュニティ版は公式 1.3.7 をベースに、英語、簡体字中国語、繁体字中国語、日本語、韓国語、スペイン語の UI を備えています。すでに公式版を使っている場合は、アプリを終了して DMG を開き、確認画面で「置換」を選んでください。画像や `.comp` プロジェクトは変更されません。
+
+### 한국어
+
+Compositor는 macOS용 무료 네이티브 이미지 편집기입니다. 이 커뮤니티 버전은 공식 1.3.7을 기반으로 영어, 간체 중국어, 번체 중국어, 일본어, 한국어, 스페인어 인터페이스를 제공합니다. 이미 공식 버전을 사용 중이라면 앱을 종료하고 DMG를 연 뒤 확인 창에서 ‘대체’를 선택하세요. 이미지와 `.comp` 프로젝트는 변경되지 않습니다.
+
+### Español
+
+Compositor es un editor de imágenes nativo y gratuito para macOS. Esta edición comunitaria, basada en la versión oficial 1.3.7, incluye interfaces en inglés, chino simplificado, chino tradicional, japonés, coreano y español. Si ya usas la versión oficial, cierra la app, abre el DMG y elige **Reemplazar** cuando macOS lo pregunte. Tus imágenes y proyectos `.comp` no se modifican.
+
+Detailed instructions below are provided in English and Simplified Chinese; the app itself is fully localized.
 
 ## English
 
