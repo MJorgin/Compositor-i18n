@@ -15,6 +15,8 @@ A free, native macOS image editor — a community multilingual edition of [Compo
 
 Anything untranslated falls back to English, so the app is always fully usable.
 
+> **Already using official Compositor?** Quit the app, open the community DMG, and choose **Replace** when macOS asks. Your images and `.comp` projects are stored outside the app and stay untouched.
+
 ### Quick install (community DMG, no Xcode)
 
 1. Download `Compositor-1.3.7-multilingual.dmg` from the latest GitHub Release.
@@ -87,6 +89,8 @@ A Simplified Chinese localization was offered upstream as PR #113. The maintaine
 - **English** —— 源语言，始终完整
 
 当前简中条目无缺失；未来新增界面若暂未翻译，会自动回退英文，不影响使用。
+
+> **已经安装官方版？** 先退出 Compositor，打开社区 DMG，在系统询问时选择「替换」。图片和 `.comp` 项目文件不在 App 包内，不会被改动。
 
 ### 快速安装（社区 DMG，无需 Xcode）
 
