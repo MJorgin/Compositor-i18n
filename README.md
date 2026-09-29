@@ -15,9 +15,24 @@ A free, native macOS image editor — a community multilingual edition of [Compo
 
 Anything untranslated falls back to English, so the app is always fully usable.
 
+### Quick install (community DMG, no Xcode)
+
+1. Download `Compositor-1.3.7-multilingual.dmg` from the latest GitHub Release.
+2. Open the DMG and drag **Compositor** into **Applications**.
+3. The first time, right-click the app and choose **Open**, then choose **Open** again.
+4. If macOS blocks it, go to **System Settings → Privacy & Security → Open Anyway**.
+
+This community DMG is ad-hoc signed but not Apple-notarized. It therefore asks for one extra confirmation; it does not require Xcode.
+
+### Replacing the official release
+
+If you already installed the official Compositor, quit it, install this community DMG, and replace the app when macOS asks. Your image files and `.comp` projects are stored outside the app and are not changed. To return to the official build, simply download it again from upstream.
+
+Please do not manually edit strings inside the already-installed official app: changing a signed app's resources invalidates its signature and can make Gatekeeper behavior confusing. Replacing it with this complete community build is simpler.
+
 ### Build and run
 
-This fork ships source only. The signed, notarized DMG on the upstream repo is produced with the original author's Apple Developer certificate, which this fork does not have.
+This fork ships source and a community DMG. The signed, notarized DMG on the upstream repo is produced with the original author's Apple Developer certificate, which this fork does not have; the community DMG therefore uses an ad-hoc signature.
 
 ```sh
 git clone https://github.com/MJorgin/Compositor-i18n.git
@@ -39,6 +54,14 @@ All strings live in one String Catalog: `Compositor/Localizable.xcstrings`.
 2. Translate — align technical terms with the localized Photoshop for your language.
 3. Please do not submit machine translation; a fluent speaker should review UI strings.
 4. Open a PR and add yourself to the table below.
+
+AI can prepare a useful first draft, but it should not be the final review. A good prompt is:
+
+```text
+You are localizing a native macOS image editor into [target language]. Translate the attached String Catalog entries while preserving every placeholder, including %@, %lld, and %%. Use concise UI wording and align technical terms with [target language] Photoshop, such as Layer, Mask, Feather, Levels, Curves, Content-Aware Fill, Contract, and Expand. Do not add explanations or punctuation that is not in the source. If a term is commonly left in English, keep it and list it separately. Return mergeable JSON only.
+```
+
+After that, a fluent speaker should check naturalness and shortcuts, run the placeholder validation, and build the app.
 
 | Language | Code | Coverage | Maintainer(s) |
 |---|---|---|---|
@@ -65,9 +88,24 @@ A Simplified Chinese localization was offered upstream as PR #113. The maintaine
 
 当前简中条目无缺失；未来新增界面若暂未翻译，会自动回退英文，不影响使用。
 
+### 快速安装（社区 DMG，无需 Xcode）
+
+1. 从最新 GitHub Release 下载 `Compositor-1.3.7-multilingual.dmg`
+2. 打开 DMG，把 **Compositor** 拖到「应用程序」
+3. 第一次启动时，右键 App 选择「打开」，再点一次「打开」
+4. 如果被系统拦截，到「系统设置 → 隐私与安全性 → 仍要打开」
+
+这个社区 DMG 使用本机临时签名，但没有 Apple 公证，因此会多一次确认；用户不需要安装 Xcode。
+
+### 已安装官方正式版怎么办
+
+如果你已经安装官方 Compositor，先退出，再安装这个社区 DMG；系统询问时选择替换。图片和 `.comp` 项目文件不在 App 包内，不会被改动。以后想回到官方版，重新下载上游官方版本即可。
+
+不建议直接修改已安装官方 App 包里的文案：这会破坏原有签名，也容易让 Gatekeeper 的提示变得混乱。直接替换为完整的社区多语言版更简单。
+
 ### 构建与运行
 
-本仓库只提供源码。官方那种「下载即用」的签名安装包，是作者用他自己的 Apple 开发者证书签名并公证的，本仓库没有该证书，因此不提供安装包。
+本仓库提供源码和社区 DMG。官方那种无额外确认的签名安装包，是作者用他自己的 Apple 开发者证书签名并公证的，本仓库没有该证书；社区 DMG 使用本机临时签名，因此首次打开需要多确认一次。
 
 ```sh
 git clone https://github.com/MJorgin/Compositor-i18n.git
@@ -89,6 +127,14 @@ open Compositor.xcodeproj      # 然后按 ⌘R 运行
 2. 翻译时请对齐**该语言版 Photoshop** 的术语
 3. 请不要提交机器翻译——界面文案应由母语者审校
 4. 提交 PR，并在下表中加上自己
+
+可以让 AI 先做初译，但不能把 AI 结果直接当成终稿。可以这样对 AI 说：
+
+```text
+你正在把一个原生 macOS 图像编辑器本地化为【目标语言】。请翻译附件中的 String Catalog 条目，完整保留 %@、%lld、%% 等占位符。界面文案要简短，并对齐【目标语言】版 Photoshop 的术语，例如图层、蒙版、羽化、色阶、曲线、内容感知填充、收缩、扩展。不要添加原文没有的解释或标点；如果某个术语在当地 Photoshop 中通常保留英文，请保留英文并单独列出。只输出可合并的 JSON。
+```
+
+AI 初译后，还需要母语者检查语气和快捷键，跑占位符校验，并实际构建 App。
 
 | 语言 | 代码 | 完成度 | 维护者 |
 |---|---|---|---|
