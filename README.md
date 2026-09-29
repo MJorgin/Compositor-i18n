@@ -1,6 +1,23 @@
-# Compositor — Community Multilingual Edition
+<p align="center">
+  <strong>English</strong> ·
+  <a href="#简体中文">简体中文</a> ·
+  <a href="#繁體中文">繁體中文</a> ·
+  <a href="#日本語">日本語</a> ·
+  <a href="#한국어">한국어</a> ·
+  <a href="#español">Español</a>
+</p>
 
-[⬇️ Download DMG](https://github.com/MJorgin/Compositor-i18n/releases/latest) · [Official Compositor](https://github.com/robbietilton/Compositor) · [Upstream PR #113](https://github.com/robbietilton/Compositor/pull/113)
+<h1 align="center">
+  Compositor
+  <br />
+  <sub>Community Multilingual Edition</sub>
+</h1>
+
+<p align="center">
+  <a href="https://github.com/MJorgin/Compositor-i18n/releases/latest"><strong>Download DMG</strong></a>
+  ·
+  <a href="https://github.com/robbietilton/Compositor">Official Compositor</a>
+</p>
 
 A free, native macOS image editor. This community edition is based on **Compositor 1.3.7** and adds six interface languages, an in-app language switcher, and a prebuilt DMG.
 
